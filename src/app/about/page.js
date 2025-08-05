@@ -1,6 +1,6 @@
 const page = () => {
   return (
-    <div className=" h-screen pt-24 lg:p-56 p-20 lg:px-64 text-white font-inter bg-gradient-to-br from-[#11264D] via-neutral-950 to-neutral-800">
+    <div className=" h-fit pt-24 lg:p-56 p-20 lg:px-64 text-white font-inter bg-gradient-to-br from-[#11264D] via-neutral-950 to-neutral-800">
       <h1 className=" text-2xl lg:text-5xl font-bold">About Me</h1>
       <p className=" my-12 mt-8 text-lg lg:text-2xl">
         I am a passionate web developer with a focus on creating dynamic and

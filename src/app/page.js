@@ -34,7 +34,7 @@ export default function Home() {
     },
   ];
   return (
-    <div className=" w-full h-screen lg:h-fit pt-15">
+    <div className=" w-full h-fit lg:h-fit pt-15">
       <div className=" flex justify-center items-center p-4 lg:p-16 gap-x-4 lg:gap-x-10 bg-[#11264D]">
         <img
           className=" w-28 h-28 lg:w-56 lg:h-56 rounded-full object-cover"

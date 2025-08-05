@@ -28,7 +28,7 @@ const page = () => {
     },
   ];
   return (
-    <div className=" h-screen lg:h-fit pt-15 lg:mt-0 text-white lg:pt-16 p-4 lg:p-16 bg-gradient-to-br from-neutral-950 to-neutral-800">
+    <div className=" h-fit lg:h-fit pt-15 lg:mt-0 text-white lg:pt-16 p-4 lg:p-16 bg-gradient-to-br from-neutral-950 to-neutral-800">
       <h1 className="font-bold font-inter text-2xl lg:text-[44px] mt-4">
         My Projects
       </h1>
