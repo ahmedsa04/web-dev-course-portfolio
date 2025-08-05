@@ -34,38 +34,51 @@ export default function Home() {
     },
   ];
   return (
-    <div className="">
-      <div className=" w-full flex justify-center items-center p-16 gap-x-10 bg-[#11264D]">
+    <div className=" w-full h-screen lg:h-fit pt-15">
+      <div className=" flex justify-center items-center p-4 lg:p-16 gap-x-4 lg:gap-x-10 bg-[#11264D]">
         <img
-          className="w-56 h-56 rounded-full object-cover"
+          className=" w-28 h-28 lg:w-56 lg:h-56 rounded-full object-cover"
           src={profile.src}
         ></img>
-        <div className="text-2xl font-inter text-white">
-          <h1 className="font-semibold text-3xl">Hi there!</h1>
-          <h1 className="text-5xl font-extrabold">I'm Ahmed Al-Shadad</h1>
-          <div className="flex items-center gap-x-4">
+        <div className="text-lg font-inter text-white">
+          <h1 className="font-semibold text-lg lg:text-3xl">Hi there!</h1>
+          <h1 className=" lg:text-5xl text-xl font-extrabold">
+            I'm Ahmed Al-Shadad
+          </h1>
+          <div className="flex flex-wrap lg:flex-row items-center gap-x-4">
             <div className="flex items-center">
-              <img className="w-8 h-8" src={instagramIcon.src}></img>
-              <h1 className="text-lg">cheetah04</h1>
+              <img
+                className=" w-4 h-4 lg:w-8  lg:h-8"
+                src={instagramIcon.src}
+              ></img>
+              <h1 className=" text-sm lg:text-lg">cheetah04</h1>
             </div>
             <div className="flex items-center">
-              <img className="w-8 h-8" src={linkedinIcon.src}></img>
-              <h1 className="text-lg">ahmed-al-shadad</h1>
+              <img
+                className=" w-4 h-4 lg:w-8  lg:h-8"
+                src={linkedinIcon.src}
+              ></img>
+              <h1 className=" text-sm lg:text-lg">ahmed-al-shadad</h1>
             </div>
             <div className="flex items-center">
-              <img className="w-8 h-8" src={githubIcon.src}></img>
-              <h1 className="text-lg">ahmedsa04</h1>
+              <img
+                className=" w-4 h-4 lg:w-8  lg:h-8"
+                src={githubIcon.src}
+              ></img>
+              <h1 className=" text-sm lg:text-lg">ahmedsa04</h1>
             </div>
             <div className="flex items-center">
-              <img className="w-7 h-7" src={webIcon.src}></img>
-              <h1 className="text-lg">fusion-blue</h1>
+              <img className=" w-3 h-3 lg:w-7 lg:h-7" src={webIcon.src}></img>
+              <h1 className=" text-sm lg:text-lg">fusion-blue</h1>
             </div>
           </div>
         </div>
       </div>
-      <div className="text-white px-36 p-20 bg-gradient-to-br from-neutral-950 to-neutral-800">
-        <h1 className="font-bold font-inter text-[44px]">About Me</h1>
-        <h1 className=" font-light font-inter text-xl mt-6">
+      <div className="text-white px-16 lg:px-36 p-12 lg:p-20 bg-gradient-to-br from-neutral-950 to-neutral-800">
+        <h1 className="font-bold font-inter text-2xl lg:text-[44px]">
+          About Me
+        </h1>
+        <h1 className=" font-light font-inter text-lg ;g:text-xl mt-6">
           Full-stack developer with a sharp focus on building modern, intuitive
           apps that automate work and deliver real value. I thrive for almost 4
           years both independently and within teams, translating customer needs
@@ -73,8 +86,10 @@ export default function Home() {
           manage the entire development cycle with clarity and purpose.
           Passionate about crafting tools that work smart
         </h1>
-        <h1 className="font-bold font-inter text-[44px] mt-16">My Project</h1>
-        <div className=" mx-auto w-fit h-fit grid grid-cols-2 justify-center gap-x-24 gap-y-16 mt-6">
+        <h1 className="font-bold font-inter text-2xl lg:text-[44px] mt-16">
+          My Projects
+        </h1>
+        <div className=" mx-auto w-fit h-fit grid grid-cols-2 justify-center gap-x-6 lg:gap-x-24 gap-y-16 mt-6">
           {projects.map((project, index) =>
             index <= 1 ? (
               <Link
@@ -84,11 +99,11 @@ export default function Home() {
               >
                 <div className="group">
                   <img
-                    className=" rounded-4xl hover:brightness-100 transform ease-in-out duration-300 brightness-50 w-[664px] h-auto max-h-[364px] object-cover object-top"
+                    className=" rounded-lg lg:rounded-4xl hover:brightness-100 transform ease-in-out duration-300 brightness-50 w-[664px] h-auto max-h-[77px] lg:max-h-[364px] object-cover object-top"
                     src={project.image.src}
                     loading="lazy"
                   />
-                  <h1 className=" p-2 text-xl text-white w-fit group-hover:text-blue-500 font-semibold">
+                  <h1 className=" p-2 lg:text-xl text-white w-fit group-hover:text-blue-500 font-semibold">
                     {project.title}
                   </h1>
                 </div>

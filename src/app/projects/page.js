@@ -28,17 +28,19 @@ const page = () => {
     },
   ];
   return (
-    <div className="text-white px-36 p-20 bg-gradient-to-br from-neutral-950 to-neutral-800">
-      <h1 className="font-bold font-inter text-[44px] mt-16">My Project</h1>
-      <div className=" mx-auto w-fit h-fit grid grid-cols-2 justify-center gap-x-24 gap-y-16 mt-6">
+    <div className=" h-screen lg:h-fit pt-15 lg:mt-0 text-white lg:pt-16 p-4 lg:p-16 bg-gradient-to-br from-neutral-950 to-neutral-800">
+      <h1 className="font-bold font-inter text-2xl lg:text-[44px] mt-4">
+        My Projects
+      </h1>
+      <div className=" mx-auto w-fit h-fit grid lg:grid-cols-2 justify-center gap-x-6 lg:gap-x-24 gap-y-6 lg:gap-y-16 mt-6">
         {projects.map((project, index) => (
           <Link key={index} href={`/projects/${project.title.toLowerCase()}`}>
             <div className="group">
               <img
-                className=" rounded-4xl hover:brightness-100 transform ease-in-out duration-300 brightness-50 w-[664px] h-auto max-h-[364px] object-cover object-top"
+                className=" rounded-lg lg:rounded-4xl hover:brightness-100 transform ease-in-out duration-300 brightness-50 w-[664px] h-auto max-h-[200px] lg:max-h-[364px] object-cover object-top"
                 src={project.image.src}
               />
-              <h1 className=" p-2 text-xl text-white w-fit group-hover:text-blue-500 font-semibold">
+              <h1 className=" p-2 lg:text-xl text-white w-fit group-hover:text-blue-500 font-semibold">
                 {project.title}
               </h1>
             </div>
