@@ -1,103 +1,102 @@
-import Image from "next/image";
+import profile from "../../public/profile.png";
+import webIcon from "../../public/language.svg";
+import linkedinIcon from "../../public/linkedin.svg";
+import instagramIcon from "../../public/instagram.svg";
+import githubIcon from "../../public/github.svg";
+import P1 from "../../public/images/Fusion-image.png";
+import P2 from "../../public/images/Ruya-image.svg";
+import P3 from "../../public/images/Waffir-image.svg";
+import Link from "next/link";
 
 export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const projects = [
+    {
+      title: "Fusion",
+      image: P1,
+      description:
+        "Components library, that has many HTML , Tailwind , React components , that helps many developers build modern minimal websites excellent looking websites , also has , many excellent web development courses for all kinds of levels and stacks in web development , frontend , backend , fullstack and UI/UX",
+      link: "https://fusion-blue.vercel.app/",
+    },
+    {
+      title: "Ruya",
+      image: P2,
+      description:
+        "Components library, that has many HTML , Tailwind , React components , that helps many developers build modern minimal websites excellent looking websites , also has , many excellent web development courses for all kinds of levels and stacks in web development , frontend , backend , fullstack and UI/UX",
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      link: "https://ruya-rust.vercel.app/",
+    },
+    {
+      title: "Waffir",
+      image: P3,
+      description:
+        "Components library, that has many HTML , Tailwind , React components , that helps many developers build modern minimal websites excellent looking websites , also has , many excellent web development courses for all kinds of levels and stacks in web development , frontend , backend , fullstack and UI/UX",
+      link: "/",
+    },
+  ];
+  return (
+    <div className="">
+      <div className=" w-full flex justify-center items-center p-16 gap-x-10 bg-[#11264D]">
+        <img
+          className="w-56 h-56 rounded-full object-cover"
+          src={profile.src}
+        ></img>
+        <div className="text-2xl font-inter text-white">
+          <h1 className="font-semibold text-3xl">Hi there!</h1>
+          <h1 className="text-5xl font-extrabold">I'm Ahmed Al-Shadad</h1>
+          <div className="flex items-center gap-x-4">
+            <div className="flex items-center">
+              <img className="w-8 h-8" src={instagramIcon.src}></img>
+              <h1 className="text-lg">cheetah04</h1>
+            </div>
+            <div className="flex items-center">
+              <img className="w-8 h-8" src={linkedinIcon.src}></img>
+              <h1 className="text-lg">ahmed-al-shadad</h1>
+            </div>
+            <div className="flex items-center">
+              <img className="w-8 h-8" src={githubIcon.src}></img>
+              <h1 className="text-lg">ahmedsa04</h1>
+            </div>
+            <div className="flex items-center">
+              <img className="w-7 h-7" src={webIcon.src}></img>
+              <h1 className="text-lg">fusion-blue</h1>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
+      <div className="text-white px-36 p-20 bg-gradient-to-br from-neutral-950 to-neutral-800">
+        <h1 className="font-bold font-inter text-[44px]">About Me</h1>
+        <h1 className=" font-light font-inter text-xl mt-6">
+          Full-stack developer with a sharp focus on building modern, intuitive
+          apps that automate work and deliver real value. I thrive for almost 4
+          years both independently and within teams, translating customer needs
+          into scalable, well-designed solutions. From UX to backend systems, I
+          manage the entire development cycle with clarity and purpose.
+          Passionate about crafting tools that work smart
+        </h1>
+        <h1 className="font-bold font-inter text-[44px] mt-16">My Project</h1>
+        <div className=" mx-auto w-fit h-fit grid grid-cols-2 justify-center gap-x-24 gap-y-16 mt-6">
+          {projects.map((project, index) =>
+            index <= 1 ? (
+              <Link
+                key={index}
+                href={`/projects/${project.title.toLowerCase()}`}
+                prefetch={true}
+              >
+                <div className="group">
+                  <img
+                    className=" rounded-4xl hover:brightness-100 transform ease-in-out duration-300 brightness-50 w-[664px] h-auto max-h-[364px] object-cover object-top"
+                    src={project.image.src}
+                    loading="lazy"
+                  />
+                  <h1 className=" p-2 text-xl text-white w-fit group-hover:text-blue-500 font-semibold">
+                    {project.title}
+                  </h1>
+                </div>
+              </Link>
+            ) : null
+          )}
+        </div>
+      </div>
     </div>
   );
 }
